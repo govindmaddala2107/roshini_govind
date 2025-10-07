@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💍 Govind & Roshini Engagement Ceremony</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>💍 Govind & Roshini Engagement Ceremony</h1>
+    <p>Join us to celebrate our special day!</p>
+
+    <!-- Calendar Icon -->
+    <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Add to Calendar" class="calendar-icon"
+            id="openModal" width="64" />
+        <p>Click to add this event to your calendar</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="calendarModal">
+        <div class="modal-content">
+            <h2>Add to Calendar</h2>
+
+            <p><strong>Date:</strong> 11 October 2025</p>
+            <p><strong>Time:</strong> 12:00 PM</p>
+            <p>
+                <strong>Venue:</strong> SATYA’s Lakshmi Grand, near Nookambika temple, Anakapalli 531001
+            </p>
+
+            <!-- Add to Calendar Links -->
+            <a class="google"
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Govind+%26+Roshini+Engagement+Ceremony&details=Join+us+for+the+celebration!&location=https%3A%2F%2Fmaps.app.goo.gl%2FWp534dRY4csFUsbo7%3Fg_st%3Diw&dates=20251011T040000Z/20251011T080000Z"
+                target="_blank">Add to Google Calendar</a>
+
+            <a class="outlook"
+                href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Govind%20%26%20Roshini%20Engagement%20Ceremony&body=Join%20us%20for%20the%20celebration!%0A%0AVenue:%20https://maps.app.goo.gl/Wp534dRY4csFUsbo7?g_st=iw&startdt=2025-10-11T09:30:00&enddt=2025-11-13T12:30:00"
+                target="_blank">Add to Outlook Calendar</a>
+
+            <a class="apple"
+                href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Govind%20%26%20Roshini%20Engagement%20Ceremony%0ADESCRIPTION:Join%20us%20for%20the%20celebration!%20Venue:%20https://maps.app.goo.gl/Wp534dRY4csFUsbo7?g_st=iw%0ALOCATION:https://maps.app.goo.gl/Wp534dRY4csFUsbo7?g_st=iw%0ADTSTART:20251011T093000%0ADTEND:20251011T123000%0AEND:VEVENT%0AEND:VCALENDAR"
+                download="Govind-Roshini-Engagement.ics">Add to Apple Calendar (.ics)</a>
+
+            <button class="close-btn" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

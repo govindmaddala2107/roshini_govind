@@ -1,0 +1,78 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #fdf6f0;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #c37d21;
+}
+
+.calendar-icon {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.calendar-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #c37d21;
+}
+
+.modal-content a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.google {
+    background: #db4437;
+}
+
+.outlook {
+    background: #0078d4;
+}
+
+.apple {
+    background: #000;
+}
+
+.close-btn {
+    background: #c37d21;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
