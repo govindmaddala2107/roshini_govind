@@ -61,13 +61,11 @@
         /* Middle clickable image */
         #middleImage {
             display: block;
-            /* margin: 120px auto 40px auto; */
-            width: 100%;
-            /* max-width: 250px; */
             cursor: pointer;
+            margin: auto;
             transition: transform 0.2s ease;
             height: 85vh;
-            /* z-index: -1; */
+            position: relative;
 
         }
 
@@ -83,6 +81,7 @@
             border-radius: 15px;
             /* margin: 20px; */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 100vh;
         }
 
         #eventDetails h2 {
@@ -146,6 +145,24 @@
 
         .know-more {
             background-color: #644b8f;
+            /* background: none; */
+            /* position: absolute; */
+            /* bottom: 15vh; */
+            color: white;
+            position: relative;
+            bottom: 15vh;
+            padding: 20px 50px;
+            /* color: white; */
+            border: 1px solid #644b8f;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .top-box {
+            height: 100vh;
+            background-color: #f1d7a6;
+            position: relative;
         }
     </style>
 </head>
@@ -164,11 +181,12 @@
     <div class="corner bottom-right"><img src="./public/images/lavender.png" alt="Lavender"></div> -->
 
     <!-- Middle clickable image -->
-    <div style="height: 95vh; background-color: #f1d7a6;">
+    <div class="top-box">
         <h1>💍 Govind & Roshini Engagement Ceremony</h1>
         <p>Join us to celebrate our special day!</p>
-        <img id="middleImage" src="./public/images/engagement1.png" alt="Engagement Couple" title="Click for more details">
-        <button class="know-more">Know More</button>
+        <img id="middleImage" src="./public/images/engagement1.png" alt="Engagement Couple"
+            title="Click for more details">
+        <button class="know-more" id="know-more">Know More</button>
     </div>
 
     <!-- Event Details -->
@@ -178,6 +196,16 @@
         <p><strong>Time:</strong> 09:30 AM - 01:30 PM</p>
         <p><strong>Venue:</strong> T. Sirasapalli, Munagapaka, Anakapalli, Andhra Pradesh-531002</p>
         <p>Join us for a day full of love, laughter, and celebrations!</p>
+        <!-- Map Button -->
+        <button id="openMap" style="
+        background-color: #7b5ea6; 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        border-radius: 10px; 
+        cursor: pointer;
+        font-size: 16px;
+    ">📍 Open in Google Maps</button>
     </div>
 
     <!-- Music Control Button -->
@@ -194,10 +222,10 @@
         const googleCalendarBtn = document.getElementById("googleCalendarBtn");
         const middleImage = document.getElementById("middleImage");
         const eventDetails = document.getElementById("eventDetails");
+        const knowMore = document.getElementById("know-more");
         let isPlaying = false;
 
-        // Play audio and scroll to event details on clicking middle image
-        middleImage.addEventListener("click", () => {
+        const scrollFromTop = () => {
             if (!isPlaying) {
                 bgMusic.play().then(() => {
                     isPlaying = true;
@@ -207,7 +235,11 @@
 
             // Scroll to event details
             eventDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
+        }
+
+        // Play audio and scroll to event details on clicking middle image
+        middleImage.addEventListener("click", scrollFromTop);
+        knowMore.addEventListener("click", scrollFromTop);
 
         // 🎶 Play/pause toggle
         musicToggle.addEventListener("click", () => {
@@ -228,6 +260,18 @@
                 "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Govind+%26+Roshini+Engagement+Ceremony&details=Join+us+for+the+celebration!&location=https%3A%2F%2Fmaps.app.goo.gl%2FWp534dRY4csFUsbo7%3Fg_st%3Diw&dates=20251011T040000Z/20251011T080000Z",
                 "_blank"
             );
+        });
+
+        const openMap = document.getElementById("openMap");
+
+        openMap.addEventListener("click", () => {
+            // Destination link
+            const destination = "Satya lakshmi Grand function hall, M2J5+JF4, Anakapalle, Andhra Pradesh 531031, India";
+
+            // Google Maps URL with source as current location
+            const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(destination)}`;
+
+            window.open(mapsUrl, "_blank");
         });
     </script>
 </body>
