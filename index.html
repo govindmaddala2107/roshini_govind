@@ -4,51 +4,223 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💍 Govind & Roshini Engagement Ceremony</title>
+    <title>Engagement Ceremony</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" />
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f3e8f5;
+            /* Lavender-ish background */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #c37d21;
+        }
+
+        /* Lavender corners */
+        .corner {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            z-index: 100;
+        }
+
+        .corner.top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .corner.top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .corner.bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+
+        .corner.bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+
+        .corner img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Middle clickable image */
+        #middleImage {
+            display: block;
+            margin: 120px auto 40px auto;
+            width: 60%;
+            max-width: 250px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        #middleImage:hover {
+            transform: scale(1.05);
+        }
+
+        /* Event details section */
+        #eventDetails {
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #eventDetails h2 {
+            color: #7b5ea6;
+            margin-bottom: 15px;
+        }
+
+        #eventDetails p {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Fixed Google Calendar Icon */
+        .google-calendar-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            z-index: 1000;
+        }
+
+        .google-calendar-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .google-calendar-btn img {
+            width: 38px;
+            height: 38px;
+        }
+
+        /* Music Button */
+        .music-btn {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #7b5ea6;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+            z-index: 1000;
+        }
+
+        .music-btn:hover {
+            background-color: #644b8f;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>💍 Govind & Roshini Engagement Ceremony</h1>
-    <p>Join us to celebrate our special day!</p>
+    <!-- 🎵 Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="./public/audio/videoplayback.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
 
-    <!-- Calendar Icon -->
-    <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Add to Calendar" class="calendar-icon"
-            id="openModal" width="64" />
-        <p>Click to add this event to your calendar</p>
+    <!-- Lavender Corners -->
+    <!-- <div class="corner top-left"><img src="./public/images/lavender.png" alt="Lavender"></div>
+    <div class="corner top-right"><img src="./public/images/lavender.png" alt="Lavender"></div>
+    <div class="corner bottom-left"><img src="./public/images/lavender.png" alt="Lavender"></div>
+    <div class="corner bottom-right"><img src="./public/images/lavender.png" alt="Lavender"></div> -->
+
+    <!-- Middle clickable image -->
+    <div style="height: 95vh;">
+        <h1>💍 Govind & Roshini Engagement Ceremony</h1>
+        <p>Join us to celebrate our special day!</p>
+        <img id="middleImage" src="./public/images/engagement1.png" alt="Engagement Couple">
+        <button>Know More</button>
     </div>
 
-    <!-- Modal -->
-    <div class="modal" id="calendarModal">
-        <div class="modal-content">
-            <h2>Add to Calendar</h2>
-
-            <p><strong>Date:</strong> 11 October 2025</p>
-            <p><strong>Time:</strong> 12:00 PM</p>
-            <p>
-                <strong>Venue:</strong> SATYA’s Lakshmi Grand, near Nookambika temple, Anakapalli 531001
-            </p>
-
-            <!-- Add to Calendar Links -->
-            <a class="google"
-                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Govind+%26+Roshini+Engagement+Ceremony&details=Join+us+for+the+celebration!&location=https%3A%2F%2Fmaps.app.goo.gl%2FWp534dRY4csFUsbo7%3Fg_st%3Diw&dates=20251011T040000Z/20251011T080000Z"
-                target="_blank">Add to Google Calendar</a>
-
-            <a class="outlook"
-                href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Govind%20%26%20Roshini%20Engagement%20Ceremony&body=Join%20us%20for%20the%20celebration!%0A%0AVenue:%20https://maps.app.goo.gl/Wp534dRY4csFUsbo7?g_st=iw&startdt=2025-10-11T09:30:00&enddt=2025-11-13T12:30:00"
-                target="_blank">Add to Outlook Calendar</a>
-
-            <a class="apple"
-                href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Govind%20%26%20Roshini%20Engagement%20Ceremony%0ADESCRIPTION:Join%20us%20for%20the%20celebration!%20Venue:%20https://maps.app.goo.gl/Wp534dRY4csFUsbo7?g_st=iw%0ALOCATION:https://maps.app.goo.gl/Wp534dRY4csFUsbo7?g_st=iw%0ADTSTART:20251011T093000%0ADTEND:20251011T123000%0AEND:VEVENT%0AEND:VCALENDAR"
-                download="Govind-Roshini-Engagement.ics">Add to Apple Calendar (.ics)</a>
-
-            <button class="close-btn" id="closeModal">Close</button>
-        </div>
+    <!-- Event Details -->
+    <div id="eventDetails">
+        <h2>Event Details</h2>
+        <p><strong>Date:</strong> 11th October 2025</p>
+        <p><strong>Time:</strong> 09:30 AM - 01:30 PM</p>
+        <p><strong>Venue:</strong> T. Sirasapalli, Munagapaka, Anakapalli, Andhra Pradesh-531002</p>
+        <p>Join us for a day full of love, laughter, and celebrations!</p>
     </div>
 
-    <script src="app.js"></script>
+    <!-- Music Control Button -->
+    <button class="music-btn" id="musicToggle">🔊 Pause Music</button>
+
+    <!-- Fixed Google Calendar Button -->
+    <button class="google-calendar-btn" id="googleCalendarBtn">
+        <img src="https://www.gstatic.com/images/branding/product/1x/calendar_2020q4_48dp.png" alt="Google Calendar" />
+    </button>
+
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+        const musicToggle = document.getElementById("musicToggle");
+        const googleCalendarBtn = document.getElementById("googleCalendarBtn");
+        const middleImage = document.getElementById("middleImage");
+        const eventDetails = document.getElementById("eventDetails");
+        let isPlaying = false;
+
+        // Play audio and scroll to event details on clicking middle image
+        middleImage.addEventListener("click", () => {
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    musicToggle.textContent = "🔊 Pause Music";
+                }).catch(err => console.log("Play blocked:", err));
+            }
+
+            // Scroll to event details
+            eventDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // 🎶 Play/pause toggle
+        musicToggle.addEventListener("click", () => {
+            if (!isPlaying) {
+                bgMusic.play();
+                musicToggle.textContent = "🔊 Pause Music";
+                isPlaying = true;
+            } else {
+                bgMusic.pause();
+                musicToggle.textContent = "🔇 Play Music";
+                isPlaying = false;
+            }
+        });
+
+        // 📅 Google Calendar redirect
+        googleCalendarBtn.addEventListener("click", () => {
+            window.open(
+                "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Govind+%26+Roshini+Engagement+Ceremony&details=Join+us+for+the+celebration!&location=https%3A%2F%2Fmaps.app.goo.gl%2FWp534dRY4csFUsbo7%3Fg_st%3Diw&dates=20251011T040000Z/20251011T080000Z",
+                "_blank"
+            );
+        });
+    </script>
 </body>
 
 </html>
