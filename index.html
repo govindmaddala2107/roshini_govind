@@ -16,10 +16,12 @@
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
+            text-align: center;
         }
 
         h1 {
-            color: #c37d21;
+            color: #7b5ea6;
+            margin: 0px !important;
         }
 
         /* Lavender corners */
@@ -59,15 +61,18 @@
         /* Middle clickable image */
         #middleImage {
             display: block;
-            margin: 120px auto 40px auto;
-            width: 60%;
-            max-width: 250px;
+            /* margin: 120px auto 40px auto; */
+            width: 100%;
+            /* max-width: 250px; */
             cursor: pointer;
             transition: transform 0.2s ease;
+            height: 85vh;
+            /* z-index: -1; */
+
         }
 
         #middleImage:hover {
-            transform: scale(1.05);
+            /* transform: scale(1.05); */
         }
 
         /* Event details section */
@@ -76,7 +81,7 @@
             background-color: rgba(255, 255, 255, 0.9);
             text-align: center;
             border-radius: 15px;
-            margin: 20px;
+            /* margin: 20px; */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
@@ -138,6 +143,10 @@
         .music-btn:hover {
             background-color: #644b8f;
         }
+
+        .know-more {
+            background-color: #644b8f;
+        }
     </style>
 </head>
 
@@ -155,11 +164,11 @@
     <div class="corner bottom-right"><img src="./public/images/lavender.png" alt="Lavender"></div> -->
 
     <!-- Middle clickable image -->
-    <div style="height: 95vh;">
+    <div style="height: 95vh; background-color: #f1d7a6;">
         <h1>💍 Govind & Roshini Engagement Ceremony</h1>
         <p>Join us to celebrate our special day!</p>
-        <img id="middleImage" src="./public/images/engagement1.png" alt="Engagement Couple">
-        <button>Know More</button>
+        <img id="middleImage" src="./public/images/engagement1.png" alt="Engagement Couple" title="Click for more details">
+        <button class="know-more">Know More</button>
     </div>
 
     <!-- Event Details -->
