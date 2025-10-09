@@ -6,185 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Engagement Ceremony</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" />
-    <style>
-        body {
-            font-family: math;
-            background: #f3e8f5;
-            /* Lavender-ish background */
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        h2,
-        p {
-            color: #321c53;
-            margin: 0px !important;
-        }
-
-        /* Lavender corners */
-        .corner {
-            position: fixed;
-            width: 80px;
-            height: 80px;
-            z-index: 100;
-        }
-
-        .corner.top-left {
-            top: 0;
-            left: 0;
-        }
-
-        .corner.top-right {
-            top: 0;
-            right: 0;
-        }
-
-        .corner.bottom-left {
-            bottom: 0;
-            left: 0;
-        }
-
-        .corner.bottom-right {
-            bottom: 0;
-            right: 0;
-        }
-
-        .corner img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        /* Middle clickable image */
-        #middleImage {
-            display: block;
-            cursor: pointer;
-            margin: auto;
-            transition: transform 0.2s ease;
-            height: 85vh;
-        }
-
-        /* Event details section */
-        #eventDetails {
-            margin-top: 1px;
-            padding: 40px 20px;
-            background-color: #7b5ea6;
-            text-align: center;
-            color: #062079;
-            /* margin: 20px; */
-            /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-            background: #14813087;
-            height: 85vh;
-        }
-
-        #eventDetails h2 {
-            color: #062079;
-            margin-bottom: 15px;
-        }
-
-        #eventDetails p {
-            color: #062079;
-            line-height: 1.5;
-        }
-
-        /* Fixed Google Calendar Icon */
-        .google-calendar-btn {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background-color: white;
-            border: none;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
-            z-index: 1000;
-        }
-
-        .google-calendar-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .google-calendar-btn img {
-            width: 38px;
-            height: 38px;
-        }
-
-        /* Music Button */
-        .music-btn {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            background-color: #14813087;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 10px 18px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s;
-            z-index: 1000;
-            border: 1px solid white;
-            font-weight: bolder;
-        }
-
-        .top-box {
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /* vertically center content */
-            align-items: center;
-            /* horizontally center content */
-            background-color: #14813087;
-            background-image: url('./public/images/engagement5.png');
-            background-repeat: no-repeat;
-            background-size: 67vh;
-            /* keeps image aspect ratio */
-            background-position: center;
-            /* centers the image */
-            /* padding: 20px; */
-            box-sizing: border-box;
-        }
-
-        .top-box-content {
-            text-align: center;
-            z-index: 2;
-            position: absolute;
-            top: 20px;
-            word-wrap: break-word;
-            /* ensure text is above background image */
-        }
-
-        /* Keep Know More button at bottom of top-box */
-        .know-more {
-            position: absolute;
-            bottom: 28vh;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #14813087;
-            color: white;
-            padding: 15px 25px;
-            /* border: 1px solid #14813087; */
-            border-radius: 10px;
-            cursor: pointer;
-            z-index: 2;
-            border: 1px solid white;
-            font-weight: bolder;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -194,25 +16,12 @@
         Your browser does not support the audio tag.
     </audio>
 
-    <!-- Lavender Corners -->
-    <!-- <div class="corner top-left"><img src="./public/images/lavender.png" alt="Lavender"></div>
-    <div class="corner top-right"><img src="./public/images/lavender.png" alt="Lavender"></div>
-    <div class="corner bottom-left"><img src="./public/images/lavender.png" alt="Lavender"></div>
-    <div class="corner bottom-right"><img src="./public/images/lavender.png" alt="Lavender"></div> -->
-
     <!-- Middle clickable image -->
     <div class="top-box">
         <div class="top-box-content">
             <h2>💍 Govind & Roshini Engagement Ceremony</h2>
             <p>Join us to celebrate our special day!</p>
         </div>
-        <!-- <img id="middleImage" src="./public/images/engagement1.png" alt="Engagement Couple"
-            title="Click for more details"> -->
-        <!-- <span>
-            <h1>💍 Govind & Roshini Engagement Ceremony</h1>
-            <p>Join us to celebrate our special day!</p>
-        </span> -->
-
         <button class="know-more" id="know-more">
 
             Event Details
@@ -253,8 +62,6 @@
         <p><strong>Date:</strong> 11th October 2025</p>
         <p><strong>Time:</strong> 12:00 PM - 03:30 PM</p>
         <p><strong>Venue:</strong> Satya lakshmi Grand function hall, Anakapalle, Andhra Pradesh 531031</p>
-        <!-- <hr>
-        <p>Join us for a day full of love, laughter, and celebrations!</p> -->
         <button id="openMap" style="
         background-color: transparent; 
         color: white; 
@@ -270,71 +77,14 @@
     </div>
 
     <!-- Music Control Button -->
-    <button class="music-btn" id="musicToggle">🔇 Play Music</button>
+    <button class="music-btn" id="musicToggle">🔇</button>
 
     <!-- Fixed Google Calendar Button -->
     <button class="google-calendar-btn" id="googleCalendarBtn">
         <img src="https://www.gstatic.com/images/branding/product/1x/calendar_2020q4_48dp.png" alt="Google Calendar" />
     </button>
 
-    <script>
-        const bgMusic = document.getElementById("bgMusic");
-        const musicToggle = document.getElementById("musicToggle");
-        const googleCalendarBtn = document.getElementById("googleCalendarBtn");
-        // const middleImage = document.getElementById("middleImage");
-        const eventDetails = document.getElementById("eventDetails");
-        const knowMore = document.getElementById("know-more");
-        let isPlaying = false;
-
-        const scrollFromTop = () => {
-            if (!isPlaying) {
-                bgMusic.play().then(() => {
-                    isPlaying = true;
-                    musicToggle.textContent = "🔊 Pause Music";
-                }).catch(err => console.log("Play blocked:", err));
-            }
-
-            // Scroll to event details
-            eventDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        // Play audio and scroll to event details on clicking middle image
-        // middleImage.addEventListener("click", scrollFromTop);
-        knowMore.addEventListener("click", scrollFromTop);
-
-        // 🎶 Play/pause toggle
-        musicToggle.addEventListener("click", () => {
-            if (!isPlaying) {
-                bgMusic.play();
-                musicToggle.textContent = "🔊 Pause Music";
-                isPlaying = true;
-            } else {
-                bgMusic.pause();
-                musicToggle.textContent = "🔇 Play Music";
-                isPlaying = false;
-            }
-        });
-
-        // 📅 Google Calendar redirect
-        googleCalendarBtn.addEventListener("click", () => {
-            window.open(
-                "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Govind+%26+Roshini+Engagement+Ceremony&details=Join+us+for+the+celebration!&location=https%3A%2F%2Fmaps.app.goo.gl%2FWp534dRY4csFUsbo7%3Fg_st%3Diw&dates=20251011T040000Z/20251011T080000Z",
-                "_blank"
-            );
-        });
-
-        const openMap = document.getElementById("openMap");
-
-        openMap.addEventListener("click", () => {
-            // Destination link
-            const destination = "Satya lakshmi Grand function hall, M2J5+JF4, Anakapalle, Andhra Pradesh 531031, India";
-
-            // Google Maps URL with source as current location
-            const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=${encodeURIComponent(destination)}`;
-
-            window.open(mapsUrl, "_blank");
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
