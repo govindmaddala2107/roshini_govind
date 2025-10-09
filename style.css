@@ -69,7 +69,7 @@ p {
     /* margin: 20px; */
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     background: #14813087;
-    height: 90vh;
+    height: 85vh;
 }
 
 #eventDetails h2 {
@@ -142,7 +142,7 @@ p {
     background-color: #14813087;
     background-image: url('./public/images/engagement2.png');
     background-repeat: no-repeat;
-    background-size: 18rem;
+    /* background-size: 18rem; */
     /* keeps image aspect ratio */
     background-position: center;
     box-sizing: border-box;
